@@ -1,0 +1,22 @@
+development: &defaults
+  adapter: mysql
+  username: root
+  password: 
+  host: localhost
+  database: reddit_godwin
+
+test:
+  <<:       *defaults
+  database: reddit_godwin
+  adapter: mysql
+  username: 
+  password: 
+  host: yourhost.com
+  port: 3306
+
+production:
+  <<:       *defaults
+  database: production.db
+
+rake:
+  <<: *defaults

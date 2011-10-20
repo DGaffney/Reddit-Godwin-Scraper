@@ -1,0 +1,11 @@
+Steps to calculating your own Godwin data on reddit:
+
+1. Setup a database on mysql of whatever table name you want
+2. Reflect those changes in the database.yml file under the development section
+2.a. update yer gems. You need DataMapper, that may be a bit of a pain.
+3. Under tasks, you have a series of scripts. If you just run through them in this order, all will be well in your world. cd into the tasks folder, and then run these:
+  ruby create_database.rb
+  ruby run_sampling.rb
+  ruby dump_full_csv.rb
+  ruby dump_proportions_csv.rb
+4. There's certainly bugs. Let me know and I will fix them.
